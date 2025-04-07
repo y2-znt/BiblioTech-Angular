@@ -40,3 +40,7 @@ J'ai appris qu'on peut créer des pipes pour transformer des données avant de l
 - Créer une classe avec le décorateur @Pipe
 - Implémenter l'interface PipeTransform
 - Coder la méthode transform qui fait les changements
+
+## Problème #3: Structure de page incomplète
+
+Même processus que le Problème 1
