@@ -83,3 +83,31 @@ J'ai appris comment créer une route avec un paramètre dynamique:
 
 - `:id` est un paramètre qui change selon le livre sélectionné
 - Ce paramètre peut être récupéré dans le composant avec ActivatedRoute
+
+## Problème #6 et #7
+
+### Nature du problème
+
+Le formulaire pour ajouter un nouveau livre était incomplet. Il ne créait pas les champs nécessaires.
+
+### Solution technique
+
+J'ai complété la méthode ngOnInit() dans le composant add-book en créant un formulaire avec FormBuilder:
+
+```ts
+this.bookForm = this.fb.group({
+  title: ["", Validators.required],
+  author: ["", Validators.required],
+  description: ["", Validators.required],
+  category: ["", Validators.required],
+});
+```
+
+### Concepts Angular utilisés
+
+J'ai utilisé:
+
+- FormBuilder pour construire mon formulaire
+- FormGroup pour regrouper tous les champs
+- Validators.required pour rendre les champs obligatoires
+- Reactive Forms qui est l'approche formulaire recommandée par Angular
