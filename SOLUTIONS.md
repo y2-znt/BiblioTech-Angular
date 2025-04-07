@@ -18,3 +18,25 @@ Dans app.component.html, j'ai remplacé les href par routerLink :
 
 J'ai utilisé routerLink qui est une directive d'Angular pour la navigation.
 Je pense que ça fait partie du système de routing d'Angular mais je suis pas sûr.
+
+## Problème #2: Besoin de formatage de texte
+
+### Nature du problème
+
+Le titre de l'application n'est pas affiché correctement. Il y avait des underscores dedans et les majuscules n'étaient pas bien mises.
+
+### Solution technique
+
+J'ai créé un pipe personnalisé `formatTitle` dans le dossier pipes. Ce pipe fait plusieurs choses:
+
+- Il remplace les "\_" par des espaces
+- Il met la première lettre en majuscule
+- Il met le reste en minuscule
+
+### Concepts Angular utilisés
+
+J'ai appris qu'on peut créer des pipes pour transformer des données avant de les afficher. Pour ça j'ai dû:
+
+- Créer une classe avec le décorateur @Pipe
+- Implémenter l'interface PipeTransform
+- Coder la méthode transform qui fait les changements
