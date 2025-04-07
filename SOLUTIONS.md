@@ -44,3 +44,21 @@ J'ai appris qu'on peut créer des pipes pour transformer des données avant de l
 ## Problème #3: Structure de page incomplète
 
 Même processus que le Problème 1
+
+## Problème #4: Pages non affichées
+
+### Nature du problème
+
+Les pages ne s'affichaient pas quand on naviguait dans l'application. La balise `router-outlet` ne fonctionnait pas correctement.
+
+### Solution technique
+
+J'ai modifié le fichier app.component.ts pour ajouter l'import de CommonModule et réorganiser les imports dans le component.
+
+### Concepts Angular utilisés
+
+J'ai appris que pour faire fonctionner le router en Angular, il faut:
+
+- Importer CommonModule dans le composant principal
+- S'assurer que RouterOutlet est bien importé
+- Déclarer ces modules dans la liste des imports du composant

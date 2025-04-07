@@ -1,11 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { FormatTitlePipe } from './pipes/format-title.pipe';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterLink, RouterOutlet, FormatTitlePipe],
   standalone: true,
+  imports: [CommonModule, RouterOutlet, RouterLink, FormatTitlePipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
