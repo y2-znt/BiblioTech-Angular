@@ -111,3 +111,25 @@ J'ai utilisé:
 - FormGroup pour regrouper tous les champs
 - Validators.required pour rendre les champs obligatoires
 - Reactive Forms qui est l'approche formulaire recommandée par Angular
+
+## Problème #8: Navigation manquante
+
+### Nature du problème
+
+Le bouton de retour dans la page détail d'un livre ne fonctionnait pas correctement. Il retournait toujours à la liste des livres au lieu de la page précédente.
+
+### Solution technique
+
+J'ai modifié la méthode goBack() dans le composant book-detail pour utiliser la méthode location.back() qui permet de revenir à la page précédente:
+
+```ts
+goBack(): void {
+  this.location.back();
+}
+```
+
+### Concepts Angular utilisés
+
+J'ai utilisé:
+
+- La méthode back() qui simule le comportement du bouton retour du navigateur
