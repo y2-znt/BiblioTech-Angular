@@ -133,3 +133,27 @@ goBack(): void {
 J'ai utilisé:
 
 - La méthode back() qui simule le comportement du bouton retour du navigateur
+
+## Problème #9: Erreur dans la console
+
+### Nature du problème
+
+Il y avait une erreur dans la console : "ERROR TypeError: Cannot read properties of undefined (reading 'title')".
+C'était parce que le template essayait d'afficher les propriétés du livre avant que celui-ci ne soit chargé.
+
+### Solution technique
+
+J'ai ajouté une directive \*ngIf pour vérifier que le livre existe avant de l'afficher :
+
+```html
+<div class="book-card" *ngIf="book">
+  <!-- le reste du code -->
+</div>
+```
+
+### Concepts Angular utilisés
+
+J'ai utilisé :
+
+- Directive structurelle \*ngIf pour afficher conditionnellement un élément
+- Gestion asynchrone des données qui arrivent après le chargement du template
