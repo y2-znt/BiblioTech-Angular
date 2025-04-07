@@ -62,3 +62,24 @@ J'ai appris que pour faire fonctionner le router en Angular, il faut:
 - Importer CommonModule dans le composant principal
 - S'assurer que RouterOutlet est bien importé
 - Déclarer ces modules dans la liste des imports du composant
+
+## Problème #5: Route manquante
+
+### Nature du problème
+
+Il n'y avait pas de route pour afficher les détails d'un livre quand on cliquait dessus.
+
+### Solution technique
+
+J'ai ajouté une route dans le fichier app.routes.ts pour les détails d'un livre:
+
+```
+{ path: 'books/:id', component: BookDetailComponent }
+```
+
+### Concepts Angular utilisés
+
+J'ai appris comment créer une route avec un paramètre dynamique:
+
+- `:id` est un paramètre qui change selon le livre sélectionné
+- Ce paramètre peut être récupéré dans le composant avec ActivatedRoute
