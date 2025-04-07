@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HighlightDirective } from '../../directives/highlight.directive';
 import { Book } from '../../models/book.model';
 import { BookService } from '../../services/book.service';
 
 @Component({
   selector: 'app-book-detail',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HighlightDirective],
   templateUrl: 'book-detail.component.html',
 })
 export class BookDetailComponent implements OnInit {
