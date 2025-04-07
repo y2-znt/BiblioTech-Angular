@@ -157,3 +157,25 @@ J'ai utilisé :
 
 - Directive structurelle \*ngIf pour afficher conditionnellement un élément
 - Gestion asynchrone des données qui arrivent après le chargement du template
+
+## Problème #10: Directive non appliquée
+
+### Nature du problème
+
+Le titre du livre ne s'affichait pas de manière mise en évidence quand le livre était en favori.
+
+### Solution technique
+
+J'ai appliqué la directive appHighlight au titre du livre et je lui ai passé la propriété isFavorite comme valeur :
+
+```html
+<h1 class="book-title" [appHighlight]="book.isFavorite">{{ book.title }}</h1>
+```
+
+### Concepts Angular utilisés
+
+J'ai utilisé :
+
+- Directive d'attribut avec une liaison de propriété entre crochets []
+- Passage d'une valeur à la directive via l'input @Input()
+- Mise en évidence conditionnelle basée sur un état du livre
