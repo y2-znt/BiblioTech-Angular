@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BookService } from '../../services/book.service';
 import { Book } from '../../models/book.model';
+import { BookService } from '../../services/book.service';
 
 @Component({
   selector: 'app-book-detail',
@@ -12,13 +12,13 @@ import { Book } from '../../models/book.model';
 })
 export class BookDetailComponent implements OnInit {
   book!: Book;
-  
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private bookService: BookService
   ) {}
-  
+
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
@@ -29,7 +29,7 @@ export class BookDetailComponent implements OnInit {
         error: (err: any) => {
           console.error(err);
           this.router.navigate(['/books']);
-        }
+        },
       });
     }
   }
@@ -41,11 +41,12 @@ export class BookDetailComponent implements OnInit {
       },
       error: (err: any) => {
         console.error('Erreur lors de la mise à jour de la note:', err);
-      }
+      },
     });
   }
 
   goBack(): void {
     // TODO 8 : Créer un bouton qui permet de revenir à la page précédente
+    this.router.navigate(['/books']);
   }
 }
