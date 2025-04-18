@@ -179,3 +179,15 @@ J'ai utilisé :
 - Directive d'attribut avec une liaison de propriété entre crochets []
 - Passage d'une valeur à la directive via l'input @Input()
 - Mise en évidence conditionnelle basée sur un état du livre
+
+## Problème #11: Bouton non fonctionnel
+
+### Nature du problème
+
+Les boutons de l'application devaient être vérifiés pour s'assurer qu'ils réagissent correctement aux clics.
+
+### Solution technique
+
+Après vérification, tous les boutons sont déjà correctement implémentés dans le composant book-list :
+
+- Navigation avec routerLink pour "Ajouter un livre" et "Retour"
