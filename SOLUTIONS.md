@@ -292,3 +292,19 @@ Déjà résolu dans le problème #14
 ### Solution technique
 
 Déjà résolu dans le problème #14
+
+## Problème #20: Titre en uppercase
+
+### Solution technique
+
+J'ai ajouté un pipe `uppercase`. Ce pipe met tout le texte en majuscules :
+
+```html
+{{ title | uppercase }}
+```
+
+### Concepts Angular utilisés
+
+J'ai utilisé :
+
+- Un pipe `uppercase` pour transformer les données avant de les afficher
