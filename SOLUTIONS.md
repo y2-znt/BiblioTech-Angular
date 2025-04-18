@@ -329,3 +329,24 @@ J'ai utilisé :
 
 - Le générateur de composants pour créer le composant header
 - L'importation et l'utilisation de composants
+
+## Problème #23: Création d'un composant footer (Bonus)
+
+### Nature du problème
+
+Le footer de l'application était directement intégré dans le composant principal (AppComponent), ce qui n'est pas une bonne pratique en termes de modularité et de réutilisabilité.
+
+### Solution technique
+
+J'ai créé un nouveau composant footer qui encapsule le pied de page de l'application :
+
+```bash
+ng g c footer
+```
+
+### Concepts Angular utilisés
+
+J'ai utilisé :
+
+- Le générateur de composants pour créer le composant footer
+- L'importation et l'utilisation de composants
