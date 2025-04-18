@@ -250,3 +250,21 @@ J'ai ajouté des alertes dans les différents composants pour informer l'utilisa
 J'ai utilisé :
 
 - Les alertes JavaScript pour informer l'utilisateur
+
+## Problème #16: Directive incomplète
+
+### Nature du problème
+
+La directive highlight ne mettait le texte qu'en gras, ce qui n'était pas suffisant pour une bonne mise en évidence visuelle des éléments favoris.
+
+### Solution technique
+
+J'ai amélioré la directive highlight pour ajouter l'effet en gras :
+
+### Concepts Angular utilisés
+
+J'ai utilisé :
+
+- Les directives d'attribut avec le décorateur @Directive
+- Le décorateur @Input pour recevoir des données du composant parent
+- La manipulation directe des styles CSS via l'API du DOM
