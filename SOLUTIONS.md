@@ -234,3 +234,19 @@ J'ai utilisé :
 
 - Un pipe personnalisé pour transformer les données avant de les afficher
 - La méthode `substring` pour limiter la longueur du texte
+
+## Problème #14: Notifications manquantes
+
+### Nature du problème
+
+L'application ne donnait aucun retour visuel à l'utilisateur après les actions importantes comme l'ajout aux favoris, la suppression d'un livre ou la mise à jour de la note. L'utilisateur ne savait donc pas si ses actions avaient réussi ou échoué.
+
+### Solution technique
+
+J'ai ajouté des alertes dans les différents composants pour informer l'utilisateur :
+
+### Concepts Angular utilisés
+
+J'ai utilisé :
+
+- Les alertes JavaScript pour informer l'utilisateur
