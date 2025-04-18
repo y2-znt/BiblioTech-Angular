@@ -251,7 +251,7 @@ J'ai utilisé :
 
 - Les alertes JavaScript pour informer l'utilisateur
 
-## Problème #16: Directive incomplète
+## Problème #15: Directive incomplète
 
 ### Nature du problème
 
@@ -268,3 +268,27 @@ J'ai utilisé :
 - Les directives d'attribut avec le décorateur @Directive
 - Le décorateur @Input pour recevoir des données du composant parent
 - La manipulation directe des styles CSS via l'API du DOM
+
+## Problème #16: Affiche une alerte qui indique que le favori a été modifié
+
+### Solution technique
+
+Déjà résolu dans le problème #14
+
+## Problème #17: Affiche une alerte qui indique que la modification du favori a échoué
+
+### Solution technique
+
+Déjà résolu dans le problème #14
+
+## Problème #18: Affiche une alerte qui indique que le livre a été supprimé
+
+### Solution technique
+
+Déjà résolu dans le problème #14
+
+## Problème #19: Affiche une alerte qui indique que la suppression du livre a échoué
+
+### Solution technique
+
+Déjà résolu dans le problème #14
