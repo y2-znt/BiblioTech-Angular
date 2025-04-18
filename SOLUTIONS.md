@@ -213,3 +213,24 @@ J'ai apporté deux modifications principales :
 ### Concepts Angular utilisés
 
 - Directives structurelles (*ngIf, *ngFor) pour le contrôle de l'affichage
+
+## Problème #13: Descriptions trop longues
+
+### Nature du problème
+
+La description d'un livre prenait trop de place dans la page de détails.
+
+### Solution technique
+
+J'ai créé un pipe personnalisé `truncate` dans le dossier pipes. Ce pipe limite la longueur du texte à 100 caractères et ajoute des points de suspension si le texte est plus long.
+
+```html
+{{ book.description | truncate:100 }}
+```
+
+### Concepts Angular utilisés
+
+J'ai utilisé :
+
+- Un pipe personnalisé pour transformer les données avant de les afficher
+- La méthode `substring` pour limiter la longueur du texte
