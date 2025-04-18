@@ -39,6 +39,9 @@ export class BookDetailComponent implements OnInit {
   updateRating(rating: number): void {
     this.bookService.updateBook(this.book.id, { rating: rating }).subscribe({
       next: (updatedBook: Book) => {
+        alert(
+          `La note de ${updatedBook.title} a été mise à jour à ${rating}/5`
+        );
         console.log('Nouvelle note:', updatedBook);
       },
       error: (err: any) => {

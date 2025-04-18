@@ -39,6 +39,7 @@ export class AddBookComponent implements OnInit {
       this.bookService.addBook(this.bookForm.value).subscribe({
         next: () => {
           this.router.navigate(['/books']);
+          alert('Livre ajouté avec succès');
         },
         error: (err: any) => {
           console.error("Erreur lors de l'ajout du livre", err);

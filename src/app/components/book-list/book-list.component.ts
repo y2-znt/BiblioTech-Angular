@@ -37,6 +37,11 @@ export class BookListComponent implements OnInit {
     this.bookService.toggleFavorite(book.id).subscribe({
       next: (updatedBook: Book) => {
         // TODO 16: Affiche une alerte qui indique que le favori a été modifié
+        alert(
+          updatedBook.isFavorite
+            ? `${updatedBook.title} a été ajouté aux favoris`
+            : `${updatedBook.title} a été retiré des favoris`
+        );
       },
       error: (err: any) => {
         // TODO 17: Affiche une alerte qui indique que la modification du favori a échoué
@@ -49,6 +54,7 @@ export class BookListComponent implements OnInit {
     this.bookService.deleteBook(id).subscribe({
       next: () => {
         // TODO 18: Affiche une alerte qui indique que le livre a été supprimé
+        alert('Le livre a été supprimé avec succès');
         console.log('Livre supprimé:', id);
       },
       error: (err: any) => {
