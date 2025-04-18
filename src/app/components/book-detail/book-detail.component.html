@@ -9,7 +9,7 @@
 
     <div class="book-info">
       <p class="author">{{ book.author }}</p>
-      <p class="description">{{ book.description }}</p>
+      <p class="description">{{ book.description | truncate : 200 }}</p>
 
       <div class="info-grid">
         <div class="info-item">

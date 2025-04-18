@@ -3,12 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HighlightDirective } from '../../directives/highlight.directive';
 import { Book } from '../../models/book.model';
+import { TruncatePipe } from '../../pipes/truncate.pipe';
 import { BookService } from '../../services/book.service';
 
 @Component({
   selector: 'app-book-detail',
   standalone: true,
-  imports: [CommonModule, HighlightDirective],
+  imports: [CommonModule, HighlightDirective, TruncatePipe],
   templateUrl: 'book-detail.component.html',
 })
 export class BookDetailComponent implements OnInit {

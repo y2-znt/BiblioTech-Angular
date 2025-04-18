@@ -3,12 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { Book } from '../../models/book.model';
+import { TruncatePipe } from '../../pipes/truncate.pipe';
 import { BookService } from '../../services/book.service';
 
 @Component({
   selector: 'app-book-list',
   standalone: true,
-  imports: [CommonModule, RouterLink, FormsModule],
+  imports: [CommonModule, RouterLink, FormsModule, TruncatePipe],
   templateUrl: './book-list.component.html',
 })
 export class BookListComponent implements OnInit {
