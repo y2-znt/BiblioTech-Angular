@@ -191,3 +191,25 @@ Les boutons de l'application devaient être vérifiés pour s'assurer qu'ils ré
 Après vérification, tous les boutons sont déjà correctement implémentés dans le composant book-list :
 
 - Navigation avec routerLink pour "Ajouter un livre" et "Retour"
+
+## Problème #12: Données non affichées
+
+### Nature du problème
+
+Il y avait une incohérence dans l'affichage des données : le composant utilisait deux propriétés (`books` et `data`) mais seule `books` était correctement remplie. Le template vérifiait la présence de données dans `data` mais itérait sur `books`, ce qui pouvait empêcher l'affichage des livres.
+
+### Solution technique
+
+J'ai apporté deux modifications principales :
+
+1. Dans le composant TypeScript :
+
+   - Suppression de la propriété `data` inutilisée
+   - Conservation uniquement de la propriété `books` qui est correctement remplie par le service
+
+2. Dans le template HTML :
+   - Remplacement de la condition `*ngIf="data && data.length > 0"` par `*ngIf="books.length > 0"`
+
+### Concepts Angular utilisés
+
+- Directives structurelles (*ngIf, *ngFor) pour le contrôle de l'affichage
