@@ -350,3 +350,9 @@ J'ai utilisé :
 
 - Le générateur de composants pour créer le composant footer
 - L'importation et l'utilisation de composants
+
+## Problème #24: Modifier la directive pour que le texte soit en gras si l'input est true et appliquer cela au champ title du livre sur les pages book-detail et book-list
+
+### Solution technique
+
+Déjà résolu dans le problème #15
